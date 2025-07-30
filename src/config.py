@@ -37,6 +37,42 @@ class Config:
             "delay_range": (1, 3),
             "timeout": 30
         },
+        "雪球": {
+            "base_url": "https://xueqiu.com",
+            "enabled": True,
+            "delay_range": (2, 4),
+            "timeout": 30
+        },
+        "巨潮资讯": {
+            "base_url": "http://www.cninfo.com.cn",
+            "enabled": True,
+            "delay_range": (1, 3),
+            "timeout": 30
+        },
+        "证券时报": {
+            "base_url": "http://www.stcn.com",
+            "enabled": True,
+            "delay_range": (1, 3),
+            "timeout": 30
+        },
+        "中国证券报": {
+            "base_url": "http://www.cs.com.cn",
+            "enabled": True,
+            "delay_range": (1, 3),
+            "timeout": 30
+        },
+        "上海证券报": {
+            "base_url": "http://www.cnstock.com",
+            "enabled": True,
+            "delay_range": (1, 3),
+            "timeout": 30
+        },
+        "第一财经": {
+            "base_url": "https://www.yicai.com",
+            "enabled": True,
+            "delay_range": (1, 3),
+            "timeout": 30
+        },
         "同花顺": {
             "base_url": "http://www.10jqka.com.cn",
             "enabled": False,

@@ -31,6 +31,7 @@ pip install -r src/requirements.txt
 
 ### 基本使用
 
+#### 基础版本
 ```bash
 # 查看帮助
 python src/main_simple.py --help
@@ -48,9 +49,30 @@ python src/main_simple.py -i 人工智能 新能源汽车 半导体
 python src/main_simple.py -f csv
 ```
 
+#### 增强版本（推荐）
+```bash
+# 查看帮助
+python src/main_enhanced.py --help
+
+# 列出所有支持的行业和公司
+python src/main_enhanced.py --list
+
+# 查看数据源
+python src/main_enhanced.py --sources
+
+# 运行演示模式
+python src/main_enhanced.py --demo
+
+# 爬取指定行业数据
+python src/main_enhanced.py --industry "人工智能"
+
+# 查看增强版功能演示
+python src/run_enhanced_demo.py
+```
+
 ## 📊 支持的新兴细分行业
 
-系统支持以下15个新兴细分行业的数据收集：
+系统支持以下20个新兴细分行业的数据收集（增强版）：
 
 | 序号 | 行业名称 | 描述 |
 |------|----------|------|
@@ -69,11 +91,20 @@ python src/main_simple.py -f csv
 | 13 | 量子计算 | 量子算法、量子通信 |
 | 14 | 基因治疗 | 基因编辑、细胞治疗 |
 | 15 | 碳中和技术 | 碳捕集、清洁能源 |
+| 16 | 芯片设计 | 集成电路设计、IP核 |
+| 17 | 自动驾驶 | 自动驾驶技术、车联网 |
+| 18 | 智能制造 | 工业4.0、智能工厂 |
+| 19 | 数字孪生 | 数字孪生技术、虚拟仿真 |
+| 20 | 边缘计算 | 边缘计算、分布式计算 |
 
 ## 📈 关键指标说明
 
 | 指标 | 单位 | 范围 | 说明 |
 |------|------|------|------|
+| 企业名称 | - | - | 公司全称 |
+| 股票代码 | - | - | A股、港股、美股代码 |
+| 市值 | 亿元 | - | 公司市值 |
+| 主要产品 | - | - | 公司核心产品和服务 |
 | 行业渗透率 | % | 0-100 | 行业产品在目标市场中的普及程度 |
 | 产能利用率 | % | 0-100 | 企业实际产能与设计产能的比率 |
 | 平均毛利率 | % | 0-100 | 企业毛利润与营业收入的比率 |
@@ -87,6 +118,10 @@ industry-report-crawler/
 ├── src/                           # 源代码目录
 │   ├── main_simple.py             # 简化版主程序
 │   ├── industry_report_crawler_simple.py  # 简化版爬虫
+│   ├── main_enhanced.py           # 增强版主程序
+│   ├── industry_report_crawler_enhanced.py # 增强版爬虫
+│   ├── run_enhanced_demo.py       # 增强版演示脚本
+│   ├── test_enhanced.py           # 增强版测试脚本
 │   ├── main.py                    # 完整版主程序
 │   ├── industry_report_crawler.py # 完整版爬虫
 │   ├── data_visualization.py      # 数据可视化模块
@@ -114,9 +149,18 @@ industry-report-crawler/
 生成的Excel文件包含以下工作表：
 
 1. **行业数据** - 详细的行业和企业数据
-   - 行业名称、企业名称
+   - 行业名称、企业名称、股票代码
+   - 市值、主要产品
    - 关键指标数据
    - 数据来源、更新时间
+
+2. **行业汇总** - 行业级别汇总数据
+   - 各行业平均指标
+   - 市场规模和增长率
+
+3. **公司详情** - 公司基本信息
+   - 企业名称、股票代码
+   - 市值、主要产品、所属行业
 
 2. **行业汇总** - 各行业关键指标汇总
    - 按行业分组的平均值和总和
