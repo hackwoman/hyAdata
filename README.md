@@ -22,8 +22,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/hackwoman/pydata.git
-cd pydata
+git clone https://github.com/hackwoman/hydata.git
+cd hydata
 
 # 安装依赖
 pip install -r src/requirements.txt
@@ -169,8 +169,8 @@ industry-report-crawler/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/hackwoman/pydata.git
-cd pydata
+git clone https://github.com/hackwoman/hydata.git
+cd hydata
 
 # 创建虚拟环境
 python -m venv venv
@@ -203,7 +203,7 @@ python -m pytest tests/
 
 如有问题或建议，请通过以下方式联系：
 
-- 提交 [GitHub Issue](https://github.com/hackwoman/pydata/issues)
+- 提交 [GitHub Issue](https://github.com/hackwoman/hydata/issues)
 - 发送邮件至项目维护者
 
 ## ⭐ 如果这个项目对您有帮助，请给我们一个星标！
